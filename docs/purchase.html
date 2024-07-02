@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Otto Optics | Developer Dashboard</title>
+    <meta name="description" content="Otto Optics Developer Dashboard">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700">
+    <link href="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnSkeleton.css" rel="stylesheet" type="text/css" />
+    <link href="https://dev.ottooptics.io/assets/plugins/global/plugins.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link href="https://dev.ottooptics.io/assets/css/style.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.5.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css" integrity="sha512-631ugrjzlQYCOP9P8BOLEMFspr5ooQwY3rgt8SMUa+QqtVMbY/tniEUOcABHDGjK50VExB4CNc61g5oopGqCEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dev.ottooptics.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dev.ottooptics.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dev.ottooptics.io/favicon-16x16.png">
+    <meta name="robots" content="noindex">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="manifest" href="https://developers.ottooptics.io/site.webmanifest">
+    <link href="https://dev.ottooptics.io/assets/css/dynamic/dynamic-location.php" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/f366cd0188.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+</head><body class="header--fixed aside--enabled aside--fixed aside--minimize">
+    <div class="grid grid--hor grid--root">
+        <div class="grid__item grid__item--fluid grid grid--ver page">
+            <div class="grid__item grid__item--fluid grid grid--hor wrapper developers-grid">
+                
+    <div id="header" class="header grid grid--ver  header--fixed ">
+        <div class="header__brand grid__item" id="header_brand">
+            <div class="header__brand-logo">
+                <a href="https://developers.ottooptics.io/developers/dashboard/">
+                    <img alt="otto optics logo small" src="https://otto-optics-assets.s3.ca-central-1.amazonaws.com/media/logos/otto-icon-2022.png" />
+                </a>
+            </div>
+        </div>
+
+        <!-- ACTIVE LOCATION -->
+        <div class="header__breadcrumbs">
+            <span>Hey, </span>
+        </div>
+        <!-- END ACTIVE LOCATION -->
+
+        <div class="header__topbar">
+
+            <!-- SUPPORT MODULES -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Support">
+                        <i class="fas fa-comment-question"></i>
+                    </span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="head head--skin-dark" style="background: #393A3D;">
+                        <h3 class="head__title">We're Here to <span style="color: #22C4FD;">Help</span></h3>
+                        <span class="head__sub">Need help navigating Otto Optics? Contact us at any of the channels below.</span>
+                    </div>
+
+                    <div class="grid-nav grid-nav--skin-light">
+                        <div class="grid-nav__row">
+                            <a target="_blank" href="mailto:tech@ottooptics.io" class="grid-nav__item">
+                                <i class="fa-duotone fa-envelope-open-text"></i>
+                                <span class="grid-nav__title">Email Support</span>
+                            </a>
+                            <a target="_blank" href="https://forms.monday.com/forms/12c64d89d8e5a196c78a8f435b75a233?r=use1" class="grid-nav__item">
+                                <i class="fa-duotone fa-bug"></i>
+                                <span class="grid-nav__title">Report a Bug</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SUPPORT MODULES -->
+
+            <!-- USER MODULE -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Account"><i class="fas fa-user"></i></span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="user-card user-card--skin-dark notification-item-padding-x">
+                        <div class="user-card__name">
+                                                      </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__custom space-between">
+                            <a href="javascript:;" class="btn btn-bold btn-brand" id="user-sign-out">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END USER MODULE -->
+        </div>
+    </div>                <div class="content grid__item grid__item--fluid grid grid--hor developers-grid">
+                    <div class="container  container--fluid  grid__item grid__item--fluid">
+                        <div class="row developers-container">
+                            <div class="col-3 settings-menu-col" style="display: none;">
+                            <ul>
+
+  <div class="dev-nav-header">
+    <span><strong>Profile</strong></span>
+  </div>
+
+  <a href="https://developers.ottooptics.io/">
+    <li class=""><i class="fas fa-home"></i><span>Dashboard</span></li>
+  </a>
+
+    <a href="https://developers.ottooptics.io/dashboard/my-clinics">
+    <li class=""><i class="fas fa-cart-shopping"></i><span>My Clinics</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/keys" class="dev-disabled">
+    <li class=""><i class="fas fa-key"></i><span>Keys and Endpoints</span></li>
+  </a>
+  
+  <div class="dev-nav-header">
+    <span><strong>API's</strong></span>
+  </div>
+
+    <a href="https://developers.ottooptics.io/dashboard/catalog">
+    <li class=""><i class="fas fa-code"></i><span>Catalog</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/supplier">
+    <li class=""><i class="fas fa-code"></i><span>Supplier</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/clinic">
+    <li class=""><i class="fas fa-code"></i><span>Clinic</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/patient">
+    <li class=""><i class="fas fa-code"></i><span>Patient</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/prescription">
+    <li class=""><i class="fas fa-code"></i><span>Prescription</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/order" class="dev-disabled">
+    <li class=""><i class="fas fa-code"></i><span>Order</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/purchase" class="dev-disabled">
+    <li class="active"><i class="fas fa-code"></i><span>Purchase Order</span></li>
+  </a>
+   
+    <a href="https://developers.ottooptics.io/dashboard/pricing" class="dev-disabled">
+    <li class=""><i class="fas fa-code"></i><span>Pricing</span></li>
+  </a>
+  </ul>
+                            </div>
+                            <div class="col-12">
+                                <div class="portlet sticky-portlet" style="height: calc(100vh - 74px);">
+                                    <div class="portlet__body h-100" style="overflow-y: scroll;">
+                                        <div class="settings-content-col">
+                                            <div class="row no-gutters mb-20">
+                                                <div class="col-auto align-self-center">
+                                                    <h3 class="portlet__head-title f-17 fw-700 mr-20 mb-0">Purchase Order API</h3>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row mt-40">
+                                                <div class="col">
+                                                    <p>The <a class="font-brand" href="https://developers.ottooptics.io/dashboard/purchase/"><strong>Purchase Order</strong></a> API allows you to fetch information about a purchase order.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-20 mt-40" id="catalog-fetch">
+                                                <div class="col">
+                                                    <h3 class="portlet__head-title fw-700 mr-20 mb-0">Fetch Purchase Order</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-20 mb-20">
+                                                <div class="col">
+                                                    <p>Useful for fetching details about a purchase order.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6" style="padding-right: 60px;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group mb-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-link"></i></span></div>
+                                                                    <input type="text" class="form-control" name="devurl" value="https://dev.ottooptics.io/api/v2/purchase/fetch" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Parameters</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">location_apiKey</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>required</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Your 64-character API key
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">purchase_order_id</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>required</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">integer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            A purchase order ID which uniquely identifies a purchase order
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Success Response</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-left"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">data</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">object</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            A Purchase Order object, parameters of the object found below:
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row" style="padding-left: 40px;">
+                                                        <div class="col">
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_created</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    A date time representing when the purchase order was created                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_supplierID</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">integer</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Supplier ID                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_status</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">integer</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Purchase order status                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_confirmation</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Purchase order confirmation string                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_confirmationUpdated</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Last updated date of the purchase order confirmation                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_trackingURL</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    A URL for tracking the shipment of the purchase order                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">po_estDeliveryDate</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Estimated delivery date for the purchase order                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                        <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">orders</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">array</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    An array containing the order IDs associated with this purchase order                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                                                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <select class="form-control" autocomplete="chrome-off" id="code-fetch-type">
+                                                                <option value="java">Java</option>
+                                                                <option value="php">PHP</option>
+                                                                <option value="python">Python</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <button type="button" class="btn btn-secondary btn-bold" id="copy-fetch-code"><i class="fas fa-copy"></i> <span id="copy-fetch-text">Copy</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-20">
+                                                        <div class="col">
+                                                            <textarea class="form-control" rows="14" id="sample-code-fetch" readonly></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://dev.ottooptics.io/assets/plugins/global/plugins.bundle.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/scripts.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.5.0/nouislider.min.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/moment.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/typeahead.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+<script src="https://developers.ottooptics.io/assets/js/Devs/user-logout.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnPlugin.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnSkeleton.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>    <script src="https://developers.ottooptics.io/assets/js/Devs/developer-purchase.js"></script>
+</body>
+</html>

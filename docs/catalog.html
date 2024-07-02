@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Otto Optics | Developer Dashboard</title>
+    <meta name="description" content="Otto Optics Developer Dashboard">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700">
+    <link href="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnSkeleton.css" rel="stylesheet" type="text/css" />
+    <link href="https://dev.ottooptics.io/assets/plugins/global/plugins.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link href="https://dev.ottooptics.io/assets/css/style.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.5.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css" integrity="sha512-631ugrjzlQYCOP9P8BOLEMFspr5ooQwY3rgt8SMUa+QqtVMbY/tniEUOcABHDGjK50VExB4CNc61g5oopGqCEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dev.ottooptics.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dev.ottooptics.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dev.ottooptics.io/favicon-16x16.png">
+    <meta name="robots" content="noindex">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="manifest" href="https://developers.ottooptics.io/site.webmanifest">
+    <link href="https://dev.ottooptics.io/assets/css/dynamic/dynamic-location.php" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/f366cd0188.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+</head><body class="header--fixed aside--enabled aside--fixed aside--minimize">
+    <div class="grid grid--hor grid--root">
+        <div class="grid__item grid__item--fluid grid grid--ver page">
+            <div class="grid__item grid__item--fluid grid grid--hor wrapper developers-grid">
+                
+    <div id="header" class="header grid grid--ver  header--fixed ">
+        <div class="header__brand grid__item" id="header_brand">
+            <div class="header__brand-logo">
+                <a href="https://developers.ottooptics.io/developers/dashboard/">
+                    <img alt="otto optics logo small" src="https://otto-optics-assets.s3.ca-central-1.amazonaws.com/media/logos/otto-icon-2022.png" />
+                </a>
+            </div>
+        </div>
+
+        <!-- ACTIVE LOCATION -->
+        <div class="header__breadcrumbs">
+            <span>Hey, </span>
+        </div>
+        <!-- END ACTIVE LOCATION -->
+
+        <div class="header__topbar">
+
+            <!-- SUPPORT MODULES -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Support">
+                        <i class="fas fa-comment-question"></i>
+                    </span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="head head--skin-dark" style="background: #393A3D;">
+                        <h3 class="head__title">We're Here to <span style="color: #22C4FD;">Help</span></h3>
+                        <span class="head__sub">Need help navigating Otto Optics? Contact us at any of the channels below.</span>
+                    </div>
+
+                    <div class="grid-nav grid-nav--skin-light">
+                        <div class="grid-nav__row">
+                            <a target="_blank" href="mailto:tech@ottooptics.io" class="grid-nav__item">
+                                <i class="fa-duotone fa-envelope-open-text"></i>
+                                <span class="grid-nav__title">Email Support</span>
+                            </a>
+                            <a target="_blank" href="https://forms.monday.com/forms/12c64d89d8e5a196c78a8f435b75a233?r=use1" class="grid-nav__item">
+                                <i class="fa-duotone fa-bug"></i>
+                                <span class="grid-nav__title">Report a Bug</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SUPPORT MODULES -->
+
+            <!-- USER MODULE -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Account"><i class="fas fa-user"></i></span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="user-card user-card--skin-dark notification-item-padding-x">
+                        <div class="user-card__name">
+                                                      </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__custom space-between">
+                            <a href="javascript:;" class="btn btn-bold btn-brand" id="user-sign-out">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END USER MODULE -->
+        </div>
+    </div>                <div class="content grid__item grid__item--fluid grid grid--hor developers-grid">
+                    <div class="container  container--fluid  grid__item grid__item--fluid">
+                        <div class="row developers-container">
+                            <div class="col-3 settings-menu-col" style="display: none;">
+                            <ul>
+
+  <div class="dev-nav-header">
+    <span><strong>Profile</strong></span>
+  </div>
+
+  <a href="https://developers.ottooptics.io/">
+    <li class=""><i class="fas fa-home"></i><span>Dashboard</span></li>
+  </a>
+
+    <a href="https://developers.ottooptics.io/dashboard/my-clinics">
+    <li class=""><i class="fas fa-cart-shopping"></i><span>My Clinics</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/keys" class="dev-disabled">
+    <li class=""><i class="fas fa-key"></i><span>Keys and Endpoints</span></li>
+  </a>
+  
+  <div class="dev-nav-header">
+    <span><strong>API's</strong></span>
+  </div>
+
+    <a href="https://developers.ottooptics.io/dashboard/catalog">
+    <li class="active"><i class="fas fa-code"></i><span>Catalog</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/supplier">
+    <li class=""><i class="fas fa-code"></i><span>Supplier</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/clinic">
+    <li class=""><i class="fas fa-code"></i><span>Clinic</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/patient">
+    <li class=""><i class="fas fa-code"></i><span>Patient</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/prescription">
+    <li class=""><i class="fas fa-code"></i><span>Prescription</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/order" class="dev-disabled">
+    <li class=""><i class="fas fa-code"></i><span>Order</span></li>
+  </a>
+  
+    <a href="https://developers.ottooptics.io/dashboard/purchase" class="dev-disabled">
+    <li class=""><i class="fas fa-code"></i><span>Purchase Order</span></li>
+  </a>
+   
+    <a href="https://developers.ottooptics.io/dashboard/pricing" class="dev-disabled">
+    <li class=""><i class="fas fa-code"></i><span>Pricing</span></li>
+  </a>
+  </ul>
+                            </div>
+                            <div class="col-12">
+                                <div class="portlet sticky-portlet" style="height: calc(100vh - 74px);">
+                                    <div class="portlet__body h-100" style="overflow-y: scroll;">
+                                        <div class="settings-content-col">
+                                            <div class="row no-gutters mb-20">
+                                                <div class="col-auto align-self-center">
+                                                    <h3 class="portlet__head-title f-17 fw-700 mr-20 mb-0">Catalog API</h3>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row mt-40">
+                                                <div class="col">
+                                                    <p>The <a class="font-brand" href="https://developers.ottooptics.io/dashboard/catalog/"><strong>Catalog</strong></a> API allows you to fetch bulk and/or individual items from Otto's product catalog. This can be useful in helping you map representation of products in your own catalog to those in Otto's for use in <a class="font-brand" href="https://developers.ottooptics.io/dashboard/order/"><strong>Order</strong></a>.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-20 mt-40" id="catalog-fetch">
+                                                <div class="col">
+                                                    <h3 class="portlet__head-title fw-700 mr-20 mb-0">Fetch Product Catalog</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-20 mb-20">
+                                                <div class="col">
+                                                    <p>Useful for fetching available and enabled Otto Product ID's for use in <a class="font-brand" href="https://developers.ottooptics.io/dashboard/catalog/"><strong>Catalog</strong></a> <a class="font-brand" href="#catalog-validate">validate</a> calls, and <a class="font-brand" href="https://developers.ottooptics.io/dashboard/order/"><strong>Order</strong></a> requests.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6" style="padding-right: 60px;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group mb-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-link"></i></span></div>
+                                                                    <input type="text" class="form-control" name="devurl" value="https://dev.ottooptics.io/api/v2/catalog/fetch" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Parameters</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">location_apiKey</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>required</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Location's 64-character API key
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">mode</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">integer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            <ul>
+                                                                <li><strong>1</strong> : Raw product-by-product listnings with pack size included in product name (default)</li>
+                                                                <li><strong>2</strong> : Products grouped by brand name, subsectioned by pack-size and product_id</li>
+                                                                <li><strong>3</strong> : Product listings will include parameter <span class="fw-500">upcs</span>(array), a full representation of each product_id and its available upc combinations. (Note: including 'product' and/or 'manufacturer' is strongly encouraged to reduce response object size</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">product</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">integer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            A product ID by which to filter product results
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">supplier_id</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">id</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            A supplier by which to filter product results. Available values are the ids returned by the supplier endpoint. You must also send a clinic id inorder to use this filer.
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Success Response</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-left"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">version</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Catalog version
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">data</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">array</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            An array of Product objects, with parameters of those objects found below:
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row" style="padding-left:40px;">
+                                                        <div class="col">
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_id</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">int</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Otto's Product ID
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_name</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Otto's Product Name
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_design</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Product Design
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_modality</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Product Modality (Daily, Bi-Weekly, Monthly, Conventional)
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_daysPerUnit</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">int</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Number of days expected until exhaustion of each unit
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_size</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">int</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Number of units in pack
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_manufacturer</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Product Manufacturer
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_sph</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available SPH values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_cyl</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available CYL values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_axis</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available AXIS values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_bc</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available ADD values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_dia</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available DIA values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_add</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available ADD values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_dn</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available D/N values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row mt-20">
+                                                                <div class="col-sm-auto align-self-center">
+                                                                    <span class="fw-500">product_colours</span>
+                                                                </div>
+                                                                <div class="col text-right align-self-center">
+                                                                    <span class="f-12">string</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-8">
+                                                                <div class="col">
+                                                                    Comma delimeted string of available COLOUR values for this product
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <select class="form-control" autocomplete="chrome-off" id="code-fetch-type">
+                                                                <option value="java">Java</option>
+                                                                <option value="php">PHP</option>
+                                                                <option value="python">Python</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <button type="button" class="btn btn-secondary btn-bold" id="copy-fetch-code"><i class="fas fa-copy"></i> <span id="copy-fetch-text">Copy</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-20">
+                                                        <div class="col">
+                                                            <textarea class="form-control" rows="14" id="sample-code-fetch" readonly></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-20 mt-60" id="catalog-validate">
+                                                <div class="col">
+                                                    <h3 class="portlet__head-title fw-700 mr-20 mb-0">Validate Product</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-20 mb-20">
+                                                <div class="col">
+                                                    <p>Useful for validating a contact lens product prior to including in a <a class="font-brand" href="https://developers.ottooptics.io/dashboard/order/"><strong>Order</strong></a> object.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6" style="padding-right: 60px;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group mb-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-link"></i></span></div>
+                                                                    <input type="text" class="form-control" name="devurl" value="https://dev.ottooptics.io/api/v2/catalog/validate" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Parameters</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">location_apiKey</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>required</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Location's 64-character API key
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">upc</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            A UPC to validate. With a UPC present, no further parameters are necessary
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">product</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">integer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            An Otto Product ID to validate, along with identifying lens parameters below
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">sph</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Formatted to two decimal places
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">cyl</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Formatted to two decimal places
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">axis</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Formatted as whole number
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">bc</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Formatted to one decimal place
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">dia</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Formatted to one decimal place
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">add</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            LO, MD, HI, MF, or formatted to two decimal places
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">dn</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            D, N
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">colour</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            String representation of colour
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">quantity</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>optional</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">integer</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Quantity of product to validate for promotion eligibility, along with Otto Product ID
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Success Response</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-left"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">valid</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">boolean</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            true or false
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">promotions</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">array</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Array of promotions available for this product and it's quantity
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mb-40">
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">upc</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            The UPC of the product
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mb-40">
+
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <select class="form-control" autocomplete="chrome-off" id="code-validate-type">
+                                                                <option value="java">Java</option>
+                                                                <option value="php">PHP</option>
+                                                                <option value="python">Python</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <button type="button" class="btn btn-secondary btn-bold" id="copy-validate-code"><i class="fas fa-copy"></i> <span id="copy-validate-text">Copy</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-20">
+                                                        <div class="col">
+                                                            <textarea class="form-control" rows="24" id="sample-code-validate" readonly></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-20 mt-60" id="catalog-validate">
+                                                <div class="col">
+                                                    <h3 class="portlet__head-title fw-700 mr-20 mb-0">Version</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-20 mb-20">
+                                                <div class="col">
+                                                    <p>Fetch the current version of the Catalog</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6" style="padding-right: 60px;">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group mb-2">
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-link"></i></span></div>
+                                                                    <input type="text" class="form-control" name="devurl" value="https://dev.ottooptics.io/api/v2/catalog/version" readonly />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Parameters</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">location_apiKey</span>
+                                                        </div>
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span>required</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-40">
+                                                        <div class="col-sm-auto">
+                                                            <span class="fw-700">Success Response</span>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <i class="fas fa-arrow-left"></i>
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="row mt-20">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <span class="fw-500">version</span>
+                                                        </div>
+                                                        <div class="col text-right align-self-center">
+                                                            <span class="f-12">string</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-8">
+                                                        <div class="col">
+                                                            Catalog version
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mb-40">
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="row">
+                                                        <div class="col-sm-auto align-self-center">
+                                                            <select class="form-control" autocomplete="chrome-off" id="code-version-type">
+                                                                <option value="java">Java</option>
+                                                                <option value="php">PHP</option>
+                                                                <option value="python">Python</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <button type="button" class="btn btn-secondary btn-bold" id="copy-version-code"><i class="fas fa-copy"></i> <span id="copy-version-text">Copy</span></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-20">
+                                                        <div class="col">
+                                                            <textarea class="form-control" rows="24" id="sample-code-version" readonly></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://dev.ottooptics.io/assets/plugins/global/plugins.bundle.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/scripts.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.5.0/nouislider.min.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/moment.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/typeahead.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+<script src="https://developers.ottooptics.io/assets/js/Devs/user-logout.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnPlugin.js"></script>
+<script src="https://dev.ottooptics.io/assets/js/global/integration/plugins/avnSkeleton/avnSkeleton.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>    <script src="https://developers.ottooptics.io/assets/js/Devs/developer-catalog.js"></script>
+</body>
+</html>
