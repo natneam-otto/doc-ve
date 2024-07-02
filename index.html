@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <meta charset="utf-8" />
+    <title>[Beta] Otto Optics | Developer Dashboard</title>
+    <meta name="description" content="Otto Optics Developer Dashboard">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,400,500,600,700">
+    <link href="../assets/css/avnSkeleton.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/plugins.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/style.bundle.css?v=1.34" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.5.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css"
+        integrity="sha512-631ugrjzlQYCOP9P8BOLEMFspr5ooQwY3rgt8SMUa+QqtVMbY/tniEUOcABHDGjK50VExB4CNc61g5oopGqCEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dev.ottooptics.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dev.ottooptics.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dev.ottooptics.io/favicon-16x16.png">
+    <meta name="robots" content="noindex">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="manifest" href="https://developers.ottooptics.io/site.webmanifest">
+    <link href="https://dev.ottooptics.io/assets/css/dynamic/dynamic-location.php" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/f366cd0188.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <style>
+        a {
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        li:hover {
+            color: #000;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        li:hover::before {
+            transform: scaleX(1);
+        }
+    </style>
 </head>
+
 <body>
-    <ul>
+    <div id="header" class="header grid grid--ver  header--fixed ">
+        <div class="header__brand grid__item" id="header_brand">
+            <div class="header__brand-logo">
+                <a href="https://developers.ottooptics.io/developers/dashboard/">
+                    <img alt="otto optics logo small"
+                        src="https://otto-optics-assets.s3.ca-central-1.amazonaws.com/media/logos/otto-icon-2022.png" />
+                </a>
+            </div>
+        </div>
+
+        <!-- ACTIVE LOCATION -->
+        <div class="header__breadcrumbs">
+            <span><i>[Beta]</i> Otto's Developer Documentation </span>
+        </div>
+        <!-- END ACTIVE LOCATION -->
+
+        <div class="header__topbar">
+
+            <!-- SUPPORT MODULES -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Support">
+                        <i class="fas fa-comment-question"></i>
+                    </span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="head head--skin-dark" style="background: #393A3D;">
+                        <h3 class="head__title">We're Here to <span style="color: #22C4FD;">Help</span></h3>
+                        <span class="head__sub">Need help navigating Otto Optics? Contact us at any of the channels
+                            below.</span>
+                    </div>
+
+                    <div class="grid-nav grid-nav--skin-light">
+                        <div class="grid-nav__row">
+                            <a target="_blank" href="mailto:tech@ottooptics.io" class="grid-nav__item">
+                                <i class="fa-duotone fa-envelope-open-text"></i>
+                                <span class="grid-nav__title">Email Support</span>
+                            </a>
+                            <a target="_blank"
+                                href="https://forms.monday.com/forms/12c64d89d8e5a196c78a8f435b75a233?r=use1"
+                                class="grid-nav__item">
+                                <i class="fa-duotone fa-bug"></i>
+                                <span class="grid-nav__title">Report a Bug</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SUPPORT MODULES -->
+
+            <!-- USER MODULE -->
+            <div class="header__topbar-item">
+                <div class="header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                    <span class="header__topbar-icon" data-toggle="tooltip" title="Account"><i
+                            class="fas fa-user"></i></span>
+                </div>
+                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
+                    <div class="user-card user-card--skin-dark notification-item-padding-x">
+                        <div class="user-card__name">
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification__custom space-between">
+                            <a href="javascript:;" class="btn btn-bold btn-brand" id="user-sign-out">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END USER MODULE -->
+        </div>
+    </div>
+    <ul style="padding-top: 90px;">
         <li><a href="/doc-ve/docs/catalog.html">Catalog</a></li>
         <li><a href="/doc-ve/docs/clinic.html">Clinic</a></li>
         <li><a href="/doc-ve/docs/order.html">Order</a></li>
@@ -17,4 +147,5 @@
         <li><a href="/doc-ve/docs/supplier.html">Supplier</a></li>
     </ul>
 </body>
+
 </html>
